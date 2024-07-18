@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<style>
+    body {
+        background-color: #6a1b45;
+        font-family: 'Arial', sans-serif;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    table {
+        color: white;
+        font-size: 16pt;
+        background-color: #53233a;
+        border-collapse: collapse;
+        width: 60%;
+        margin: 0 auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+    }
+
+    table.inner {
+        margin: 0 auto;
+        border: 0px;
+    }
+
+    td {
+        padding: 12px;
+    }
+
+    input[type=text], input[type=password], input[type=checkbox], input[type=radio], select, textarea {
+        width: 90%;
+        padding: 10px;
+        margin: 6px 0;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type=radio] {
+        width: auto;
+    }
+
+    input[type=submit] {
+        width: 90%;
+        background-color: white;
+        color: #333;
+        font-size: 16pt;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type=submit]:hover {
+        background-color: #ccc;
+    }
+
+    select {
+        width: 94%;
+    }
+    
+    textarea {
+        width: 90%;
+    }
+
+    label {
+        margin-right: 10px;
+    }
+
+    .container {
+        text-align: center;
+        padding-top: 20px;
+    }
+</style>
+</head>
+
+<body>
+<form action="form.php" method="POST">
+    <table cellpadding="10">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="Name" placeholder="Enter your name"></td>
+        </tr>
+
+        <tr>
+            <td>Email</td>
+            <td><input type="text" name="Email" placeholder="Enter your email"></td>
+        </tr>
+
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="psw"></td>
+        </tr>
+
+        <tr>
+            <td>Phone Number</td>
+            <td><input type="text" name="Mobile_Number" maxlength="10"></td>
+        </tr>
+
+        <tr>
+            <td>Gender</td>
+            <td>
+                <label for="male">Male</label> 
+                <input type="radio" id="male" name="Gender" value="Male">
+                <label for="female">Female</label> 
+                <input type="radio" id="female" name="Gender" value="Female">
+                <label for="other">Other</label> 
+                <input type="radio" id="other" name="Gender" value="Other">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Language</td>
+            <td>
+                <select name="Language">
+                    <option value="s">Select</option>
+                    <option value="English">English</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="Chinese">Chinese</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Zip Code</td>
+            <td><input type="text" name="Pin_Code" maxlength="6"></td>
+        </tr>
+
+        <tr>
+            <td>About</td>
+            <td><textarea name="abt" placeholder="Write about yourself" rows="4"></textarea></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="container">
+                <input type="submit" value="Register">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

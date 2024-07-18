@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hoverable Sidenav Buttons</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        #mySidenav a {
+            position: absolute;
+            left: -120px;
+            transition: 0.3s;
+            padding: 20px;
+            width: 140px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #mySidenav a:hover {
+            left: 0;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        #html {
+            top: 30px;
+            background-color: #e74c3c;
+        }
+
+        #css {
+            top: 100px;
+            background-color: #3498db;
+        }
+
+        #bootstrap {
+            top: 170px;
+            background-color: #9b59b6;
+        }
+
+        #javascript {
+            top: 240px;
+            background-color: #f39c12;
+        }
+
+        h1, p {
+            margin-left: 90px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Hoverable Sidenav Buttons</h1>
+        <p>Hover over the buttons to see the effect.</p>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="#" id="html">HTML</a>
+        <a href="#" id="css">CSS</a>
+        <a href="#" id="bootstrap">Bootstrap</a>
+        <a href="#" id="javascript">JavaScript</a>
+    </div>
+</body>
+</html>
